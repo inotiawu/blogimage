@@ -14,5 +14,5 @@ jobs:
           secretId: ${{secrets.secretId}}
           secretKey: ${{secrets.secretKey}}
           envId: ${{secrets.envId}}
-          staticSrcPath: drawing/5/1
+          staticSrcPath: ./drawing/5/1
         
