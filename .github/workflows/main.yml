@@ -14,11 +14,8 @@ jobs:
         id: deployStatic
         uses: TencentCloudBase/cloudbase-action@v1
         with:
-        	
-          secretId: ${{ secrets.SECRET_ID }}
-          secretKey: ${{ secrets.SECRET_KEY }}
-          # 云开发的环境id
-          envId: ${{ secrets.ENV_ID }}
-          
+          secretId: ${{secrets.secretId}}
+          secretKey: ${{secrets.secretKey}}
+          envId: ${{secrets.envId}}
           staticSrcPath: drawing/5/1
         
