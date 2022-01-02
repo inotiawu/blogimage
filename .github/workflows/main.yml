@@ -1,5 +1,5 @@
 # This is a basic workflow to help you get started with Actions
-on: [push] # push 代码时触发
+on: [push]
 
 jobs:
   deploy:
@@ -8,11 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
-      # 使用云开发 Github Action 部署
-      - name: Deploy static to Tencent CloudBase
-        id: deployStatic
-        uses: TencentCloudBase/cloudbase-action@v1
+      - name: Deploy to Tencent CloudBase
+        uses: TencentCloudBase/cloudbase-action@v2
         with:
           secretId: ${{secrets.secretId}}
           secretKey: ${{secrets.secretKey}}
